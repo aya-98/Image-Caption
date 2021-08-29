@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+		
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+        <style type="text/css">
+        body.loggedin {
+    background-color: #f3f4f7;}
+
+    .navtop {
+  	background-color: #2f3947;
+  	height: 80px;
+  	width: 100%;
+  	border: 0;}
+
+  	.navtop div {
+  	display: flex;
+  	margin: 0 auto;
+  	width: 1000px;
+  	height: 100%;
+}
+.navtop div h1 {
+  	flex: 1;
+  	font-size: 24px;
+  	padding: 0;
+ 	margin: 0;
+  	color: #eaebed;
+  	font-weight: normal;
+}
+        </style>
+
+        
+	</head>
+	<body class="loggedin">
+
+		<nav class="navtop">
+
+			<div>
+				<h1 style= "font-style:italic ; font-size:70px"> Image Search Engine</h1>
+                
+			</div>
+		</nav>
+		
+
+		<div class="container"  >
+
+		<div style="margin-top:150px;">
+   <!-- File upload form -->
+   <form method="post" action="{{ url_for('upload') }}"  enctype="multipart/form-data" class="form-inline">
+    <div class="form-group">
+                      <label style= "font-style:italic ; font-size:25px" >Choose Image: </label>
+                      <input type="file" name="file" class="form-control" autocomplete="off" >
+                 </div>
+                 <input type="submit" name="submit" class="btn btn-success" value="UPLOAD"/>
+
+
+             
+
+
+             <div style="margin-top:60px;"> 
+              
+             	<label style= "font-style:italic ; font-size:25px" >Enter text : </label>
+            
+             <input type="search"  name="q"  style="height:60px ; width:480px ;" >
+              
+             <input type="submit"  class="btn btn-success"  value="Search"  style="height:40px ; width:90px ; font-size:15px"/>
+             </div>
+         </form>
+  </div>
+	</div>		
+	</body>
+</html>
